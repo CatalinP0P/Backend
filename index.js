@@ -31,7 +31,7 @@ run().catch(console.dir);
 app.get("/get", async (req, res) => {
   const response = await client.db().collection("User").find({}).toArray();
   console.log(response);
-  res.send("Da");
+  res.send(response);
 });
 
 app.post("/", async (req, res) => {
